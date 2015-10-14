@@ -7,7 +7,7 @@ application = Flask(__name__)
 application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///rhodesrifleclub.db'
 db = SQLAlchemy(application)
 
-@application.route("/users")
+@application.route("/members.json")
 def members():
     members = Member.query.all()
     return jsonify(users = [member.username for member in members])
