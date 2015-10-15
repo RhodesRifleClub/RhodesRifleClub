@@ -18,7 +18,7 @@ class Member(db.Model):
         self.last_name = last_name
 
     def __repr__(self):
-        return '%r %r' % self.first_name, self.last_name
+        return "{0} {1}".format(self.first_name, self.last_name)
 
 @application.route("/members.json")
 def members():
