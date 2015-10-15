@@ -23,7 +23,7 @@ class Member(db.Model):
 @application.route("/members.json")
 def members():
     members = Member.query.all()
-    return jsonify(members = members)
+    return jsonify(members = [member.first_name + " " + member.last_name for member in members])
 
 @application.route("/")
 def hello():
