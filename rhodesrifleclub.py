@@ -13,7 +13,6 @@ class Member(db.Model):
     last_name = db.Column(db.String(120))
 
     def __init__(self, email, first_name, last_name):
-        self.username = username
         self.email = email
         self.first_name = first_name
         self.last_name = last_name
